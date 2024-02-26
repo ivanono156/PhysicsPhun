@@ -49,8 +49,15 @@ MonoBehaviour:
   sensitivity: 1
   bowlingBall: {fileID: 0}
   rb: {fileID: 0}
-  torqueMagnitude: 50
-  topAngularVelocity: 20
+  jumpBar: {fileID: 4625572082400229161}
+  torqueMagnitude: 500
+  topAngularVelocity: 30
+  jumpForce: 50
+  jumpAngle: 30
+  scaleChangeRate: 1
+  minScale: 0.2
+  maxScale: 5
+  hardDropForce: 60
 --- !u!1 &4671054543435034334
 GameObject:
   m_ObjectHideFlags: 0
@@ -78,7 +85,7 @@ Transform:
   m_GameObject: {fileID: 4671054543435034334}
   serializedVersion: 2
   m_LocalRotation: {x: 0.2588186, y: -0, z: -0, w: 0.965926}
-  m_LocalPosition: {x: 0, y: 6.5, z: -12.25}
+  m_LocalPosition: {x: 0, y: 15.5, z: -25.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -231,6 +238,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7022550574553178430, guid: 7d2514f8a2e76ec4591f5715d18bd3ca, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7022550574553178430, guid: 7d2514f8a2e76ec4591f5715d18bd3ca, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9032592357512702184, guid: 7d2514f8a2e76ec4591f5715d18bd3ca, type: 3}
       propertyPath: m_Name
       value: Canvas
@@ -240,6 +255,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7d2514f8a2e76ec4591f5715d18bd3ca, type: 3}
+--- !u!114 &4625572082400229161 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4975236686648235275, guid: 7d2514f8a2e76ec4591f5715d18bd3ca, type: 3}
+  m_PrefabInstance: {fileID: 376826983600169506}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &5037081290252198261 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4674046589142729559, guid: 7d2514f8a2e76ec4591f5715d18bd3ca, type: 3}

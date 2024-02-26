@@ -186,17 +186,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de6ba5f97c0b754499666663b109f153, type: 3}
---- !u!114 &317931612 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4625572082400229161, guid: 0ee660fcedcc2cb4698f7a262a006e36, type: 3}
-  m_PrefabInstance: {fileID: 6141525605071359661}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &620033630
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -657,18 +646,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: BowlingBall
       objectReference: {fileID: 0}
-    - target: {fileID: 206334689633320745, guid: e1f4e0db1ee4a6144bd77aa530ab1a69, type: 3}
-      propertyPath: m_Mass
-      value: 80
-      objectReference: {fileID: 0}
-    - target: {fileID: 206334689633320745, guid: e1f4e0db1ee4a6144bd77aa530ab1a69, type: 3}
-      propertyPath: m_UseGravity
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 206334689633320745, guid: e1f4e0db1ee4a6144bd77aa530ab1a69, type: 3}
-      propertyPath: m_AngularDrag
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2992460528852071152, guid: e1f4e0db1ee4a6144bd77aa530ab1a69, type: 3}
       propertyPath: m_LocalPosition.x
       value: 13
@@ -789,58 +766,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: cameraRig
       objectReference: {fileID: 0}
-    - target: {fileID: 4625572082400229161, guid: 0ee660fcedcc2cb4698f7a262a006e36, type: 3}
-      propertyPath: m_Value
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4625572082400229161, guid: 0ee660fcedcc2cb4698f7a262a006e36, type: 3}
-      propertyPath: m_TargetGraphic
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 5055535336466131878, guid: 0ee660fcedcc2cb4698f7a262a006e36, type: 3}
       propertyPath: rb
       value: 
       objectReference: {fileID: 1922082267}
     - target: {fileID: 5055535336466131878, guid: 0ee660fcedcc2cb4698f7a262a006e36, type: 3}
-      propertyPath: jumpBar
-      value: 
-      objectReference: {fileID: 317931612}
-    - target: {fileID: 5055535336466131878, guid: 0ee660fcedcc2cb4698f7a262a006e36, type: 3}
-      propertyPath: maxScale
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5055535336466131878, guid: 0ee660fcedcc2cb4698f7a262a006e36, type: 3}
-      propertyPath: minScale
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5055535336466131878, guid: 0ee660fcedcc2cb4698f7a262a006e36, type: 3}
-      propertyPath: jumpAngle
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 5055535336466131878, guid: 0ee660fcedcc2cb4698f7a262a006e36, type: 3}
-      propertyPath: jumpForce
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 5055535336466131878, guid: 0ee660fcedcc2cb4698f7a262a006e36, type: 3}
       propertyPath: bowlingBall
       value: 
       objectReference: {fileID: 96357264199892856}
-    - target: {fileID: 5055535336466131878, guid: 0ee660fcedcc2cb4698f7a262a006e36, type: 3}
-      propertyPath: hardDropForce
-      value: 60
-      objectReference: {fileID: 0}
-    - target: {fileID: 5055535336466131878, guid: 0ee660fcedcc2cb4698f7a262a006e36, type: 3}
-      propertyPath: scaleChangeRate
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5055535336466131878, guid: 0ee660fcedcc2cb4698f7a262a006e36, type: 3}
-      propertyPath: torqueMagnitude
-      value: 500
-      objectReference: {fileID: 0}
-    - target: {fileID: 5055535336466131878, guid: 0ee660fcedcc2cb4698f7a262a006e36, type: 3}
-      propertyPath: topAngularVelocity
-      value: 30
-      objectReference: {fileID: 0}
     - target: {fileID: 6933544875612849944, guid: 0ee660fcedcc2cb4698f7a262a006e36, type: 3}
       propertyPath: m_LocalPosition.x
       value: 13
@@ -879,26 +812,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6933544875612849944, guid: 0ee660fcedcc2cb4698f7a262a006e36, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7149359093597013356, guid: 0ee660fcedcc2cb4698f7a262a006e36, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 15.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7149359093597013356, guid: 0ee660fcedcc2cb4698f7a262a006e36, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -25.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7228240772270654236, guid: 0ee660fcedcc2cb4698f7a262a006e36, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: -10
-      objectReference: {fileID: 0}
-    - target: {fileID: 7228240772270654236, guid: 0ee660fcedcc2cb4698f7a262a006e36, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8371353942350251460, guid: 0ee660fcedcc2cb4698f7a262a006e36, type: 3}
-      propertyPath: m_AnchorMax.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8371353942350251460, guid: 0ee660fcedcc2cb4698f7a262a006e36, type: 3}
