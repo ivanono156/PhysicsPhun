@@ -20,9 +20,9 @@ public class ComicalPins : MonoBehaviour
 
     private void AddFakeForce(Vector3 v)
     {
-        // Apply an impulse force in the dircetion of v. the magnitute of the force
+        // Apply an impulse force to myRb in the dircetion of v. the magnitute of the force
         // should be |v| * the mass * extraForce
-        myRb.AddForce(v * myRb.mass * extraForce, ForceMode.Impulse);
+
     }
 
     private void AddRandomTorque()
@@ -32,7 +32,6 @@ public class ComicalPins : MonoBehaviour
         float z = UnityEngine.Random.Range(0.1f, 1f);
         // Make a vector from the X, Y, and Z components, and add an impulse torque
         // in the direction of the random vector, with magnitude mass * randomTorqueAmount
-        Vector3 v = new Vector3(x, y, z);
-        myRb.AddTorque(v.normalized * randomTorqueAmount * myRb.mass, ForceMode.Impulse);
+
     }
 }

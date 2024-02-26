@@ -55,22 +55,22 @@ public class CameraControls : MonoBehaviour
         if (Input.GetKey(KeyCode.W))
         {
             // add the unit vector corresponding to a forward rotation to torqueDir
-            torqueDir += transform.right;
+            torqueDir += Vector3.zero;
         }
         if (Input.GetKey(KeyCode.A))
         {
             // add the unit vector corresponding to a left rotation to torqueDir
-            torqueDir += transform.forward;
+            torqueDir += Vector3.zero;
         }
         if (Input.GetKey(KeyCode.S))
         {
             // add the unit vector corresponding to a backward rotation to torqueDir
-            torqueDir += -transform.right;
+            torqueDir += Vector3.zero;
         }
         if (Input.GetKey(KeyCode.D))
         {
             // add the unit vector corresponding to a right rotation to torqueDir
-            torqueDir += -transform.forward;
+            torqueDir += Vector3.zero;
         }
         torque = torqueDir.normalized * torqueMagnitude * SpeedCap() * rb.mass;
     }
@@ -98,7 +98,7 @@ public class CameraControls : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.Space))
         {
             // Add an impulse force to the rigidbody in the direction of GetJumpVector
-            rb.AddForce(GetJumpVector(), ForceMode.Impulse);
+            // rb.AddForce(...);
             jumpMeter = 0f;
         }
         jumpBar.value = jumpMeter;
@@ -107,8 +107,8 @@ public class CameraControls : MonoBehaviour
     private Vector3 GetJumpVector()
     {
         // replace jumpDirection with the forward vector rotated up by [jumpAngle] degrees
-        // (Use Quaternion.AngleAxis())
-        Vector3 jumpDirection = Quaternion.AngleAxis(-jumpAngle, transform.right) * transform.forward;
+        Vector3 jumpDirection = Vector3.up; // (Use Quaternion.AngleAxis())
+
         return jumpDirection * rb.mass * jumpMeter * jumpForce;
     }
 
@@ -116,7 +116,7 @@ public class CameraControls : MonoBehaviour
     private void FixedUpdate()
     {
         // Add the torque we calculate in Update to the rigidbody
-        rb.AddTorque(torque);
+        // Add torque on this line
         
         if (Falling())
         {
@@ -127,7 +127,7 @@ public class CameraControls : MonoBehaviour
     private bool Falling()
     {
         // Check if our y velocity is less than zero
-        return rb.velocity.y < 0;
+        return false;
     }
 
     //This function makes it much easier to change directions
@@ -136,7 +136,7 @@ public class CameraControls : MonoBehaviour
         // use the dot product to figure out how how much of our angular velocity
         // is in the direction we are currently trying to rotate (the direction of torque)
         // and divide by out max angular velocity
-        float fractionOfMax = Vector3.Dot(torque.normalized, rb.angularVelocity) / topAngularVelocity;
+        float fractionOfMax = 0;
         return Mathf.Pow(Mathf.Max(1 - fractionOfMax, 0), 3);
     }
 }
